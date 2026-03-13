@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Block Street | The Execution Layer for On-Chain Stocks | BSB Token</title>
+<meta name="description" content="Block Street — the first DeFi protocol powering on-chain stocks with institutional-grade execution. Earn BSB & BLOCK tokens. Connect wallet, claim rewards, and join the future of tokenized equities on Monad.">
+<meta name="keywords" content="Block Street, BlockStreet, BSB token, BLOCK token, on-chain stocks, tokenized equities, DeFi, RWA, Monad, LayerZero, USD1, WLFI, tokenized assets, DeFi protocol, Block Street crypto, Block Street BSB, block street claim, block street airdrop, block street connect wallet, block street launchpad">
+<meta name="author" content="Block Street">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://blockstreet.xyz/">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://blockstreet.xyz/">
+<meta property="og:title" content="Block Street — Execution Layer for On-Chain Stocks | BSB Token">
+<meta property="og:description" content="Block Street is the first DeFi protocol built for tokenized stock utility. Earn BSB & BLOCK tokens through pre-launch participation. Connect wallet to claim now.">
+<meta property="og:image" content="https://blockstreet.xyz/og-image.png">
+<meta property="og:site_name" content="Block Street">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@BlockStreetXYZ">
+<meta name="twitter:title" content="Block Street — Execution Layer for On-Chain Stocks">
+<meta name="twitter:description" content="The first DeFi protocol powering on-chain stocks with institutional-grade execution. Earn BSB & BLOCK tokens. Claim now.">
+<meta name="twitter:image" content="https://blockstreet.xyz/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Block Street",
+  "url": "https://blockstreet.xyz",
+  "logo": "https://blockstreet.xyz/logo.png",
+  "description": "Block Street is the first DeFi protocol built for tokenized stock utility, offering decentralized lending, leverage, and yield on on-chain stocks.",
+  "sameAs": [
+    "https://twitter.com/BlockStreetXYZ",
+    "https://t.me/blockstreet",
+    "https://coinmarketcap.com/currencies/block-street/"
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Block Street",
+  "headline": "Block Street — The Execution Layer for On-Chain Stocks",
+  "description": "Block Street is the first DeFi protocol built for tokenized stock utility. Earn BSB and BLOCK tokens through pre-launch participation and on-chain activities.",
+  "keywords": "Block Street, BSB token, BLOCK token, tokenized stocks, DeFi, RWA, Monad, LayerZero"
+}
+</script>
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300f5a0'/%3E%3Cstop offset='100%25' stop-color='%2300d9f5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%230a0e1a'/%3E%3Ctext x='32' y='44' font-family='Arial Black,sans-serif' font-size='36' font-weight='900' text-anchor='middle' fill='url(%23g)'%3EB%3C/text%3E%3Crect x='10' y='50' width='44' height='3' rx='1.5' fill='url(%23g)'/%3E%3C/svg%3E">
+
+<style>
+  :root {
+    --neon: #00f5a0;
+    --neon2: #00d9f5;
+    --neon3: #7b61ff;
+    --bg: #050810;
+    --bg2: #080d1a;
+    --bg3: #0d1428;
+    --card: rgba(255,255,255,0.03);
+    --border: rgba(0,245,160,0.15);
+    --text: #e8eaf0;
+    --muted: #6b7a99;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'SF Pro Display', -apple-system, sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  ::selection { background: var(--neon); color: #000; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--neon); border-radius: 4px; }
+
+  /* GRID BACKGROUND */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,245,160,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,245,160,0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* GLOW ORBS */
+  .orb {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+    z-index: 0;
+    animation: orb-float 8s ease-in-out infinite;
+  }
+  .orb-1 { width: 600px; height: 600px; background: radial-gradient(circle, rgba(0,245,160,0.12), transparent); top: -200px; right: -100px; }
+  .orb-2 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,217,245,0.08), transparent); bottom: 10%; left: -150px; animation-delay: -4s; }
+  .orb-3 { width: 300px; height: 300px; background: radial-gradient(circle, rgba(123,97,255,0.1), transparent); top: 40%; right: 20%; animation-delay: -2s; }
+
+  @keyframes orb-float {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-30px) scale(1.05); }
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 40px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(5,8,16,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: linear-gradient(135deg, var(--neon), var(--neon2));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-size: 18px;
+    color: #000;
+    letter-spacing: -1px;
+  }
+
+  .nav-logo-text {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.3px;
+  }
+
+  .nav-logo-text span { color: var(--neon); }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+  }
+
+  .nav-links a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+    letter-spacing: 0.3px;
+  }
+  .nav-links a:hover { color: var(--neon); }
+
+  .nav-actions { display: flex; gap: 12px; align-items: center; }
+
+  /* BUTTONS */
+  .btn {
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+    letter-spacing: 0.3px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .btn:hover::before { opacity: 1; }
+
+  .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .btn-outline:hover {
+    border-color: var(--neon);
+    color: var(--neon);
+    box-shadow: 0 0 20px rgba(0,245,160,0.15);
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--neon), var(--neon2));
+    color: #000;
+    font-weight: 700;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0,245,160,0.35);
+  }
+
+  .btn-lg {
+    padding: 16px 36px;
+    font-size: 16px;
+    border-radius: 14px;
+  }
+
+  .btn-ghost {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--text);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: var(--neon);
+    color: var(--neon);
+  }
+
+  .btn-claim {
+    background: linear-gradient(135deg, #7b61ff, #a855f7);
+    color: #fff;
+    font-weight: 700;
+  }
+  .btn-claim:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(123,97,255,0.4);
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 24px 80px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0,245,160,0.08);
+    border: 1px solid rgba(0,245,160,0.2);
+    border-radius: 100px;
+    padding: 6px 16px;
+    font-size: 13px;
+    color: var(--neon);
+    font-weight: 600;
+    margin-bottom: 28px;
+    letter-spacing: 0.5px;
+  }
+  .badge-dot {
+    width: 7px; height: 7px;
+    background: var(--neon);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.8); }
+  }
+
+  .hero h1 {
+    font-size: clamp(44px, 7vw, 88px);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    color: #fff;
+    margin-bottom: 24px;
+    max-width: 1000px;
+  }
+
+  .hero h1 .grad {
+    background: linear-gradient(135deg, var(--neon), var(--neon2), var(--neon3));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: var(--muted);
+    max-width: 640px;
+    margin: 0 auto 48px;
+    line-height: 1.7;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 72px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+  }
+
+  .stat-item {
+    background: var(--bg2);
+    padding: 28px 24px;
+    text-align: center;
+  }
+  .stat-num {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .stat-num span { color: var(--neon); }
+  .stat-label { font-size: 13px; color: var(--muted); font-weight: 500; }
+
+  /* TICKER */
+  .ticker-wrap {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0,245,160,0.03);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+  }
+  .ticker {
+    display: flex;
+    gap: 60px;
+    animation: ticker 30s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .ticker-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+  .ticker-item .up { color: var(--neon); }
+  .ticker-item .down { color: #ff4d6d; }
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* SECTIONS */
+  section { position: relative; z-index: 1; }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .section-tag {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 16px;
+  }
+
+  .section-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -2px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 540px;
+    line-height: 1.7;
+  }
+
+  /* FEATURES */
+  .features { padding: 120px 0; }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    overflow: hidden;
+    margin-top: 64px;
+  }
+
+  .feature-card {
+    background: var(--bg2);
+    padding: 40px 36px;
+    transition: background 0.3s;
+  }
+  .feature-card:hover { background: var(--bg3); }
+
+  .feature-icon {
+    width: 52px; height: 52px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+  }
+  .icon-green { background: rgba(0,245,160,0.1); border: 1px solid rgba(0,245,160,0.2); }
+  .icon-blue { background: rgba(0,217,245,0.1); border: 1px solid rgba(0,217,245,0.2); }
+  .icon-purple { background: rgba(123,97,255,0.1); border: 1px solid rgba(123,97,255,0.2); }
+
+  .feature-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+  }
+  .feature-desc { font-size: 14px; color: var(--muted); line-height: 1.7; }
+
+  /* EARN / CLAIM SECTION */
+  .earn-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, transparent, rgba(0,245,160,0.02), transparent);
+  }
+
+  .earn-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 64px;
+  }
+
+  .earn-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 48px 40px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .earn-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .earn-card:hover { border-color: rgba(0,245,160,0.3); box-shadow: 0 20px 60px rgba(0,245,160,0.05); }
+  .earn-card:hover::before { opacity: 1; }
+
+  .earn-card-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--neon);
+    margin-bottom: 12px;
+  }
+  .earn-card-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+  .earn-card-desc { font-size: 15px; color: var(--muted); line-height: 1.6; margin-bottom: 32px; }
+
+  .earn-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+  }
+  .earn-highlight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+  }
+  .check { color: var(--neon); font-size: 16px; }
+
+  /* TOKEN INFO */
+  .token-section { padding: 100px 0; }
+
+  .token-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .token-card-big {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .token-card-big::after {
+    content: 'BSB';
+    position: absolute;
+    right: -20px; bottom: -20px;
+    font-size: 140px;
+    font-weight: 900;
+    color: rgba(0,245,160,0.04);
+    letter-spacing: -5px;
+    pointer-events: none;
+  }
+
+  .token-price {
+    font-size: 48px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 6px;
+  }
+  .token-change { font-size: 16px; color: var(--neon); font-weight: 700; margin-bottom: 32px; }
+
+  .token-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  .token-row:last-child { border-bottom: none; }
+  .token-row-label { font-size: 14px; color: var(--muted); }
+  .token-row-val { font-size: 14px; color: #fff; font-weight: 600; }
+
+  .token-info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .token-info-item { display: flex; gap: 20px; align-items: flex-start; }
+  .token-info-icon {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: rgba(0,245,160,0.08);
+    border: 1px solid rgba(0,245,160,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .token-info-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .token-info-desc { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* BACKED BY */
+  .backers { padding: 80px 0; border-top: 1px solid var(--border); }
+
+  .backers-title { text-align: center; font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 2px; font-weight: 600; margin-bottom: 40px; }
+
+  .backers-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .backer-pill {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--muted);
+    transition: all 0.2s;
+  }
+  .backer-pill:hover { color: #fff; border-color: rgba(0,245,160,0.3); }
+
+  /* HOW IT WORKS */
+  .how { padding: 100px 0; }
+
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 64px;
+    position: relative;
+  }
+  .steps::before {
+    content: '';
+    position: absolute;
+    top: 32px;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border), var(--neon), var(--border), transparent);
+    z-index: 0;
+  }
+
+  .step {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  .step-num {
+    width: 64px; height: 64px;
+    border-radius: 50%;
+    background: var(--bg2);
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--neon);
+    margin: 0 auto 20px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .step:hover .step-num {
+    border-color: var(--neon);
+    box-shadow: 0 0 24px rgba(0,245,160,0.3);
+  }
+  .step-title { font-size: 16px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+  .step-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ROADMAP */
+  .roadmap { padding: 100px 0; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.3), transparent); }
+
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 64px;
+  }
+
+  .roadmap-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 24px;
+    position: relative;
+  }
+  .roadmap-card.active {
+    border-color: rgba(0,245,160,0.4);
+    background: rgba(0,245,160,0.05);
+  }
+  .roadmap-card.active::before {
+    content: 'LIVE';
+    position: absolute;
+    top: 16px; right: 16px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: var(--neon);
+    background: rgba(0,245,160,0.1);
+    border: 1px solid rgba(0,245,160,0.3);
+    padding: 2px 8px;
+    border-radius: 100px;
+  }
+
+  .roadmap-q { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+  .roadmap-year { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+  .roadmap-items { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .roadmap-items li { font-size: 13px; color: var(--muted); display: flex; gap: 8px; }
+  .roadmap-items li::before { content: '→'; color: var(--neon); flex-shrink: 0; }
+
+  /* WALLET MODAL SIMULATION */
+  .wallet-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+  }
+  .wallet-modal.open { display: flex; }
+
+  .modal-box {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 28px;
+    padding: 48px;
+    max-width: 420px;
+    width: 90%;
+    position: relative;
+    animation: modal-in 0.3s ease;
+  }
+  @keyframes modal-in {
+    from { opacity: 0; transform: translateY(20px) scale(0.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 20px; right: 20px;
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 20px;
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+  .modal-title { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+  .modal-sub { font-size: 14px; color: var(--muted); margin-bottom: 32px; }
+
+  .wallet-options { display: flex; flex-direction: column; gap: 12px; }
+
+  .wallet-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--text);
+    text-align: left;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .wallet-option:hover {
+    border-color: rgba(0,245,160,0.3);
+    background: rgba(0,245,160,0.04);
+    color: #fff;
+  }
+  .wallet-icon { font-size: 28px; flex-shrink: 0; }
+  .wallet-name { font-weight: 700; }
+  .wallet-type { font-size: 12px; font-weight: 400; color: var(--muted); }
+
+  /* CLAIM MODAL */
+  .claim-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    align-items: center;
+    justify-content: center;
+  }
+  .claim-modal.open { display: flex; }
+
+  .claim-box {
+    background: var(--bg2);
+    border: 1px solid rgba(123,97,255,0.3);
+    border-radius: 28px;
+    padding: 48px;
+    max-width: 460px;
+    width: 90%;
+    position: relative;
+    animation: modal-in 0.3s ease;
+    text-align: center;
+  }
+
+  .claim-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    display: block;
+    animation: bounce 1s ease-in-out infinite alternate;
+  }
+  @keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-8px); }
+  }
+
+  .claim-amount {
+    font-size: 52px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 4px;
+  }
+  .claim-token { font-size: 20px; color: var(--neon); font-weight: 700; margin-bottom: 12px; }
+  .claim-desc { font-size: 14px; color: var(--muted); line-height: 1.6; margin-bottom: 32px; }
+
+  /* CTA FINAL */
+  .cta-section {
+    padding: 120px 24px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, rgba(0,245,160,0.06), rgba(0,217,245,0.03), rgba(123,97,255,0.06));
+    border: 1px solid var(--border);
+    border-radius: 32px;
+    padding: 80px 48px;
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-box::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 33px;
+    background: linear-gradient(135deg, rgba(0,245,160,0.3), transparent, rgba(123,97,255,0.3));
+    z-index: -1;
+    opacity: 0.5;
+  }
+
+  .cta-box h2 {
+    font-size: clamp(36px, 5vw, 56px);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -2px;
+    margin-bottom: 16px;
+  }
+  .cta-box p { font-size: 18px; color: var(--muted); margin-bottom: 40px; }
+  .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 60px 24px 40px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+  }
+
+  .footer-brand p { font-size: 14px; color: var(--muted); line-height: 1.7; margin-top: 16px; max-width: 280px; }
+
+  .footer-col-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a { font-size: 14px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--neon); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    font-size: 13px;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .social-links { display: flex; gap: 12px; }
+  .social-link {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .social-link:hover { border-color: var(--neon); background: rgba(0,245,160,0.05); }
+
+  /* RESPONSIVE */
+  @media (max-width: 900px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    .hero-stats { grid-template-columns: repeat(2, 1fr); }
+    .features-grid { grid-template-columns: 1fr; }
+    .earn-grid { grid-template-columns: 1fr; }
+    .token-grid { grid-template-columns: 1fr; gap: 40px; }
+    .steps { grid-template-columns: repeat(2, 1fr); }
+    .steps::before { display: none; }
+    .roadmap-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 600px) {
+    .hero-stats { grid-template-columns: 1fr 1fr; }
+    .steps { grid-template-columns: 1fr; }
+    .roadmap-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .modal-box, .claim-box { padding: 32px 24px; }
+  }
+
+  /* ANIMATIONS */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-in.visible { opacity: 1; transform: none; }
+</style>
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+<div class="orb orb-3"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-icon">B</div>
+    <span class="nav-logo-text">Block<span>Street</span></span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#features">Protocol</a></li>
+    <li><a href="#earn">Earn</a></li>
+    <li><a href="#token">BSB Token</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="https://docs.blockstreet.xyz" target="_blank">Docs</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="btn btn-outline" onclick="openClaimModal()">🎁 Claim</button>
+    <button class="btn btn-primary" onclick="openWalletModal()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>
+      Connect Wallet
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">
+    <span class="badge-dot"></span>
+    Pre-launch Participation Open · $11.5M Raised
+  </div>
+  <h1>The <span class="grad">Execution Layer</span><br>for On-Chain Stocks</h1>
+  <p class="hero-sub">Block Street is the first DeFi protocol powering tokenized equities with institutional-grade execution. Trade AAPL, TSLA, NVDA on-chain — borrow, short, and hedge like never before.</p>
+  <div class="hero-actions">
+    <button class="btn btn-primary btn-lg" onclick="openWalletModal()">
+      Connect Wallet
+    </button>
+    <button class="btn btn-claim btn-lg" onclick="openClaimModal()">
+      🎁 Claim BSB Tokens
+    </button>
+    <a href="#features" class="btn btn-ghost btn-lg">Learn More ↓</a>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">$11<span>.5M</span></div>
+      <div class="stat-label">Total Raised</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1<span>B</span></div>
+      <div class="stat-label">BSB Total Supply</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">$33<span>.5M</span></div>
+      <div class="stat-label">Market Cap</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3<span>+</span></div>
+      <div class="stat-label">Major Exchange Listings</div>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker">
+    <span class="ticker-item">BSB <span class="up">$0.1617 ▲4.21%</span></span>
+    <span class="ticker-item">BLOCK <span class="up">$0.0162 ▲0.52%</span></span>
+    <span class="ticker-item">AAPL.onchain <span class="up">$189.43 ▲1.2%</span></span>
+    <span class="ticker-item">TSLA.onchain <span class="down">$248.71 ▼0.8%</span></span>
+    <span class="ticker-item">NVDA.onchain <span class="up">$875.90 ▲3.4%</span></span>
+    <span class="ticker-item">MSTR.onchain <span class="up">$1,420.00 ▲5.6%</span></span>
+    <span class="ticker-item">USD1 <span class="up">$1.000 ▲0.01%</span></span>
+    <span class="ticker-item">TVL <span class="up">$42.8M ▲12%</span></span>
+    <span class="ticker-item">BSB <span class="up">$0.1617 ▲4.21%</span></span>
+    <span class="ticker-item">BLOCK <span class="up">$0.0162 ▲0.52%</span></span>
+    <span class="ticker-item">AAPL.onchain <span class="up">$189.43 ▲1.2%</span></span>
+    <span class="ticker-item">TSLA.onchain <span class="down">$248.71 ▼0.8%</span></span>
+    <span class="ticker-item">NVDA.onchain <span class="up">$875.90 ▲3.4%</span></span>
+    <span class="ticker-item">MSTR.onchain <span class="up">$1,420.00 ▲5.6%</span></span>
+    <span class="ticker-item">USD1 <span class="up">$1.000 ▲0.01%</span></span>
+    <span class="ticker-item">TVL <span class="up">$42.8M ▲12%</span></span>
+  </div>
+</div>
+
+<!-- BACKED BY -->
+<section class="backers">
+  <div class="container">
+    <p class="backers-title">Backed by World-Class Investors</p>
+    <div class="backers-grid">
+      <div class="backer-pill">Hack VC</div>
+      <div class="backer-pill">DWF Labs</div>
+      <div class="backer-pill">Generative Ventures</div>
+      <div class="backer-pill">Bridge34</div>
+      <div class="backer-pill">Steven Wang</div>
+      <div class="backer-pill">Citadel Alumni</div>
+      <div class="backer-pill">Point72 / Cubist</div>
+      <div class="backer-pill">Halborn Security</div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Core Protocol</div>
+      <h2 class="section-title">Built Different.<br>Executed On-Chain.</h2>
+      <p class="section-sub">Block Street combines Wall Street execution standards with the transparency and programmability of DeFi.</p>
+    </div>
+    <div class="features-grid fade-in">
+      <div class="feature-card">
+        <div class="feature-icon icon-green">⚡</div>
+        <div class="feature-title">Aqua RFQ Engine</div>
+        <div class="feature-desc">Market makers compete via cryptographically signed request-for-quote model. Best-execution guaranteed on every trade with zero MEV leakage and institutional-grade latency.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-blue">🏔️</div>
+        <div class="feature-title">Everst Lending Protocol</div>
+        <div class="feature-desc">Native lending, borrowing, and liquidation tooling built specifically for tokenized equities. Go long, short, or hedge — with DeFi-native risk controls.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-purple">🌐</div>
+        <div class="feature-title">LayerZero Multichain</div>
+        <div class="feature-desc">Seamless cross-chain settlement via LayerZero. Deploy and trade across Ethereum, BNB Chain, and Monad from a unified liquidity layer with a single API.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-green">📊</div>
+        <div class="feature-title">Tokenized Equities</div>
+        <div class="feature-desc">Trade AAPL, TSLA, NVDA, MSTR and more on-chain. Not just wrapped tokens — fully borrowable, shortable, and hedgeable assets with real price discovery.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-blue">💎</div>
+        <div class="feature-title">USD1 / WLFI Integration</div>
+        <div class="feature-desc">First dedicated USD1 launchpad. Providing USD1 liquidity infrastructure and stablecoin ecosystem tools aligned with the World Liberty Financial economy.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon icon-purple">🔐</div>
+        <div class="feature-title">Institutional Security</div>
+        <div class="feature-desc">Audited by Halborn Security. Quotes are cryptographically signed and verified on-chain to prevent manipulation. Enterprise-grade compliance baked in.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how">
+  <div class="container">
+    <div class="fade-in" style="text-align:center">
+      <div class="section-tag">How It Works</div>
+      <h2 class="section-title">Four Steps to On-Chain Trading</h2>
+    </div>
+    <div class="steps fade-in">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Connect Wallet</div>
+        <div class="step-desc">Link MetaMask, WalletConnect, Phantom or any EVM-compatible wallet in one click.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Deposit Assets</div>
+        <div class="step-desc">Fund with ETH, BNB, USDC, USD1 or existing BSB tokens to access the liquidity layer.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Trade On-Chain Stocks</div>
+        <div class="step-desc">Execute AAPL, TSLA, NVDA trades with institutional spread via the Aqua RFQ engine.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Earn & Claim BSB</div>
+        <div class="step-desc">Accrue BSB and BLOCK tokens through trading, staking, and pre-launch participation rewards.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EARN SECTION -->
+<section class="earn-section" id="earn">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">Earn Rewards</div>
+      <h2 class="section-title">Participate & Earn</h2>
+      <p class="section-sub">Accumulate BSB and BLOCK tokens through pre-launch activities and on-chain engagement.</p>
+    </div>
+    <div class="earn-grid fade-in">
+      <div class="earn-card">
+        <div class="earn-card-label">Token Rewards</div>
+        <div class="earn-card-title">Claim BSB Tokens</div>
+        <div class="earn-card-desc">Pre-launch participants earn BSB token allocations through on-chain activities, referrals, and ecosystem contributions. Claim your allocation now.</div>
+        <div class="earn-highlights">
+          <div class="earn-highlight"><span class="check">✓</span> Pre-launch allocation rewards</div>
+          <div class="earn-highlight"><span class="check">✓</span> Referral bonus program</div>
+          <div class="earn-highlight"><span class="check">✓</span> On-chain activity multipliers</div>
+          <div class="earn-highlight"><span class="check">✓</span> Listed on Binance Alpha, Bybit & Bitget</div>
+        </div>
+        <button class="btn btn-claim btn-lg" onclick="openClaimModal()" style="width:100%;justify-content:center;">🎁 Claim BSB Now</button>
+      </div>
+      <div class="earn-card">
+        <div class="earn-card-label">Ecosystem Exposure</div>
+        <div class="earn-card-title">Hold BLOCK Token</div>
+        <div class="earn-card-desc">BLOCK token holders gain direct exposure to every project launched via Blockstreet. Governance rights, utility access, and shared ecosystem revenue.</div>
+        <div class="earn-highlights">
+          <div class="earn-highlight"><span class="check">✓</span> Governance voting rights</div>
+          <div class="earn-highlight"><span class="check">✓</span> Platform service access</div>
+          <div class="earn-highlight"><span class="check">✓</span> Shared project exposure</div>
+          <div class="earn-highlight"><span class="check">✓</span> LayerZero multichain utility</div>
+        </div>
+        <button class="btn btn-primary btn-lg" onclick="openWalletModal()" style="width:100%;justify-content:center;">Connect & Stake</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOKEN -->
+<section class="token-section" id="token">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-tag">BSB Token</div>
+      <h2 class="section-title">Block Street Token</h2>
+    </div>
+    <div class="token-grid fade-in">
+      <div class="token-card-big">
+        <div class="token-price">$0.1617</div>
+        <div class="token-change">▲ +4.21% (24h) · CoinMarketCap #511</div>
+        <div class="token-row">
+          <span class="token-row-label">Market Cap</span>
+          <span class="token-row-val">$33,590,043</span>
+        </div>
+        <div class="token-row">
+          <span class="token-row-label">24h Volume</span>
+          <span class="token-row-val">$787,452,567</span>
+        </div>
+        <div class="token-row">
+          <span class="token-row-label">Circulating Supply</span>
+          <span class="token-row-val">207,750,000 BSB</span>
+        </div>
+        <div class="token-row">
+          <span class="token-row-label">Max Supply</span>
+          <span class="token-row-val">1,000,000,000 BSB</span>
+        </div>
+        <div class="token-row">
+          <span class="token-row-label">Networks</span>
+          <span class="token-row-val">ETH · BNB · Monad</span>
+        </div>
+        <div class="token-row">
+          <span class="token-row-label">Exchanges</span>
+          <span class="token-row-val">Binance Alpha · Bybit · Bitget</span>
+        </div>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="openWalletModal()">Buy BSB</button>
+          <button class="btn btn-claim" onclick="openClaimModal()">Claim</button>
+          <a href="https://coinmarketcap.com/currencies/block-street/" target="_blank" class="btn btn-ghost">CMC ↗</a>
+        </div>
+      </div>
+      <div class="token-info-list">
+        <div class="token-info-item">
+          <div class="token-info-icon">⚖️</div>
+          <div>
+            <div class="token-info-title">Governance</div>
+            <div class="token-info-desc">BSB holders vote on protocol upgrades, treasury allocations, and new asset listings. Your stake = your voice in the future of on-chain equities.</div>
+          </div>
+        </div>
+        <div class="token-info-item">
+          <div class="token-info-icon">💰</div>
+          <div>
+            <div class="token-info-title">Protocol Revenue</div>
+            <div class="token-info-desc">Earn a share of trading fees generated by the Aqua RFQ engine and Everst lending protocol. Stakers receive proportional yield from on-chain activity.</div>
+          </div>
+        </div>
+        <div class="token-info-item">
+          <div class="token-info-icon">🚀</div>
+          <div>
+            <div class="token-info-title">Launchpad Access</div>
+            <div class="token-info-desc">BSB holders get early access to new projects launched via Blockstreet ecosystem — including USD1 integrated protocols and cross-chain RWA launches.</div>
+          </div>
+        </div>
+        <div class="token-info-item">
+          <div class="token-info-icon">🔗</div>
+          <div>
+            <div class="token-info-title">Cross-Chain Utility</div>
+            <div class="token-info-desc">LayerZero-enabled BSB token works seamlessly across Ethereum, BNB Smart Chain, and Monad — zero friction, maximum composability.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="container">
+    <div class="fade-in" style="text-align:center">
+      <div class="section-tag">Roadmap</div>
+      <h2 class="section-title">Path to the Future</h2>
+    </div>
+    <div class="roadmap-grid fade-in">
+      <div class="roadmap-card">
+        <div class="roadmap-q">Q4</div>
+        <div class="roadmap-year">2024</div>
+        <ul class="roadmap-items">
+          <li>Core team formation</li>
+          <li>Aqua RFQ architecture design</li>
+          <li>Seed fundraising</li>
+          <li>Monad partnership</li>
+        </ul>
+      </div>
+      <div class="roadmap-card active">
+        <div class="roadmap-q">Q1–Q2</div>
+        <div class="roadmap-year">2025</div>
+        <ul class="roadmap-items">
+          <li>$11.5M raise (Hack VC, DWF Labs)</li>
+          <li>BSB token launch on 3 exchanges</li>
+          <li>Pre-launch participation opens</li>
+          <li>Aqua testnet launch</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-q">Q3–Q4</div>
+        <div class="roadmap-year">2025</div>
+        <ul class="roadmap-items">
+          <li>Monad mainnet deployment</li>
+          <li>AAPL, TSLA, NVDA, MSTR live</li>
+          <li>Everst lending protocol launch</li>
+          <li>Execution dashboards live</li>
+        </ul>
+      </div>
+      <div class="roadmap-card">
+        <div class="roadmap-q">2026</div>
+        <div class="roadmap-year">& Beyond</div>
+        <ul class="roadmap-items">
+          <li>Full equity universe expansion</li>
+          <li>Institutional API access</li>
+          <li>Options & derivatives layer</li>
+          <li>Cross-chain scaling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-box fade-in">
+    <h2>Wall Street Meets Web3.<br><span style="color:var(--neon)">Block Street.</span></h2>
+    <p>Join thousands of early participants earning BSB tokens and shaping the future of on-chain capital markets.</p>
+    <div class="cta-btns">
+      <button class="btn btn-primary btn-lg" onclick="openWalletModal()">Connect Wallet</button>
+      <button class="btn btn-claim btn-lg" onclick="openClaimModal()">🎁 Claim Tokens</button>
+      <a href="https://t.me/blockstreet" target="_blank" class="btn btn-ghost btn-lg">Join Telegram</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="text-decoration:none">
+        <div class="nav-logo-icon">B</div>
+        <span class="nav-logo-text">Block<span>Street</span></span>
+      </a>
+      <p>The first DeFi protocol powering tokenized stock utility with institutional-grade execution on Monad, Ethereum, and BNB Chain.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Protocol</div>
+      <ul class="footer-links">
+        <li><a href="#features">Aqua RFQ</a></li>
+        <li><a href="#features">Everst Lending</a></li>
+        <li><a href="#token">BSB Token</a></li>
+        <li><a href="#earn">Earn & Claim</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Resources</div>
+      <ul class="footer-links">
+        <li><a href="https://docs.blockstreet.xyz" target="_blank">Documentation</a></li>
+        <li><a href="https://coinmarketcap.com/currencies/block-street/" target="_blank">CoinMarketCap</a></li>
+        <li><a href="https://blockstreet.xyz/whitepaper" target="_blank">Whitepaper</a></li>
+        <li><a href="https://blockstreet.xyz/audit" target="_blank">Audit Report</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Community</div>
+      <ul class="footer-links">
+        <li><a href="https://twitter.com/BlockStreetXYZ" target="_blank">X / Twitter</a></li>
+        <li><a href="https://t.me/blockstreet" target="_blank">Telegram</a></li>
+        <li><a href="https://linkedin.com/company/blockstreet" target="_blank">LinkedIn</a></li>
+        <li><a href="https://discord.gg/blockstreet" target="_blank">Discord</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Block Street. All rights reserved. · Bridging Wall Street to Web3.</span>
+    <div class="social-links">
+      <a href="https://twitter.com/BlockStreetXYZ" target="_blank" class="social-link">𝕏</a>
+      <a href="https://t.me/blockstreet" target="_blank" class="social-link">✈️</a>
+      <a href="https://discord.gg/blockstreet" target="_blank" class="social-link">💬</a>
+      <a href="https://coinmarketcap.com/currencies/block-street/" target="_blank" class="social-link">📊</a>
+    </div>
+  </div>
+</footer>
+
+<!-- WALLET MODAL -->
+<div class="wallet-modal" id="walletModal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeWalletModal()">✕</button>
+    <div class="modal-title">Connect Wallet</div>
+    <div class="modal-sub">Choose your wallet to access Block Street Protocol</div>
+    <div class="wallet-options">
+      <button class="wallet-option" onclick="connectWallet('MetaMask')">
+        <span class="wallet-icon">🦊</span>
+        <div>
+          <div class="wallet-name">MetaMask</div>
+          <div class="wallet-type">Browser Extension · EVM</div>
+        </div>
+      </button>
+      <button class="wallet-option" onclick="connectWallet('WalletConnect')">
+        <span class="wallet-icon">🔗</span>
+        <div>
+          <div class="wallet-name">WalletConnect</div>
+          <div class="wallet-type">Mobile & Desktop · Multichain</div>
+        </div>
+      </button>
+      <button class="wallet-option" onclick="connectWallet('Coinbase')">
+        <span class="wallet-icon">🔵</span>
+        <div>
+          <div class="wallet-name">Coinbase Wallet</div>
+          <div class="wallet-type">Self-custody · EVM</div>
+        </div>
+      </button>
+      <button class="wallet-option" onclick="connectWallet('Phantom')">
+        <span class="wallet-icon">👻</span>
+        <div>
+          <div class="wallet-name">Phantom</div>
+          <div class="wallet-type">Multi-chain · EVM + Solana</div>
+        </div>
+      </button>
+      <button class="wallet-option" onclick="connectWallet('OKX')">
+        <span class="wallet-icon">⭕</span>
+        <div>
+          <div class="wallet-name">OKX Wallet</div>
+          <div class="wallet-type">Web3 · Multi-chain</div>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- CLAIM MODAL -->
+<div class="claim-modal" id="claimModal">
+  <div class="claim-box">
+    <button class="modal-close" onclick="closeClaimModal()">✕</button>
+    <span class="claim-icon">🎁</span>
+    <div class="claim-amount">2,500</div>
+    <div class="claim-token">BSB Tokens Available</div>
+    <div class="claim-desc">You have unclaimed BSB tokens from pre-launch participation. Connect your wallet to claim your allocation before the snapshot deadline.</div>
+    <div style="display:flex;flex-direction:column;gap:12px;">
+      <button class="btn btn-claim btn-lg" style="width:100%;justify-content:center;" onclick="closeClaimModal();openWalletModal()">
+        Connect Wallet to Claim
+      </button>
+      <button class="btn btn-ghost" style="width:100%;justify-content:center;" onclick="closeClaimModal()">
+        Maybe Later
+      </button>
+    </div>
+    <div style="margin-top:20px;font-size:12px;color:var(--muted);">
+      Claim deadline: March 31, 2026 · Powered by Monad · Audited by Halborn
+    </div>
+  </div>
+</div>
+
+<script>
+  function openWalletModal() {
+    document.getElementById('walletModal').classList.add('open');
+  }
+  function closeWalletModal() {
+    document.getElementById('walletModal').classList.remove('open');
+  }
+  function openClaimModal() {
+    document.getElementById('claimModal').classList.add('open');
+  }
+  function closeClaimModal() {
+    document.getElementById('claimModal').classList.remove('open');
+  }
+  function connectWallet(name) {
+    closeWalletModal();
+    const btn = document.querySelector('.nav-actions .btn-primary');
+    btn.innerHTML = `✓ ${name} Connected`;
+    btn.style.background = 'linear-gradient(135deg,#00f5a0,#00d9f5)';
+    btn.style.cursor = 'default';
+  }
+  document.getElementById('walletModal').addEventListener('click', function(e) {
+    if (e.target === this) closeWalletModal();
+  });
+  document.getElementById('claimModal').addEventListener('click', function(e) {
+    if (e.target === this) closeClaimModal();
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
